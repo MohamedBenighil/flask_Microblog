@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Microblog</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar__brand">
+        <img class="navbar__logo" src="./logo.svg" alt="logo" /> Microblog
+      </div>
+
+      <ul class="navbar__navigation">
+        <li class="navbar__navigation-item">
+          <a class="navbar__link" href="#">Recent</a>
+        </li>
+        <li class="navbar__navigation-item">
+          <a class="navbar__link" href="#">Calandar</a>
+        </li>
+      </ul>
+    </header>
+    <main class="main">
+      <section>
+        <h1>Add new entry</h1>
+        <form class="form" method="get">
+          <p class="form__paragraph">
+            <!-- <label class="form__label" for="sample">Entry contents</label> -->
+            <textarea
+              class="form__input"
+              name="sample"
+              id="sample"
+              aria-label="Entry contents"
+            ></textarea>
+          </p>
+          <button class="form__button" type="submit">Add Entry</button>
+        </form>
+      </section>
+      <section>
+        <h1>Recent posts</h1>
+        <article class="entry">
+          <div>
+            <h2 class="entry__title">A bit of chill Today</h2>
+            <time class="entry__date" datetime="2022-04-24">• Apr 24</time>
+          </div>
+          <p class="entry__content">
+            Today i can’ t learn too much, because i spent some time designing
+            my new app
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__content">
+        <section class="footer__left">
+          <div class="footer__column">
+            <a class="footer__item" href="#">Made by Mohamed BENIGHIL</a>
+            <a class="footer__item" href="#">Check out my other projects</a>
+          </div>
+        </section>
+        <section class="footer__right">
+          <div class="footer__column">
+            <a class="footer__item" href="#">Recent</a>
+            <a class="footer__item" href="#">Calendar</a>
+          </div>
+          <div class="footer__column">
+            <a class="footer__item" href="#">About</a>
+            <a class="footer__item" href="#">How this was made</a>
+          </div>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

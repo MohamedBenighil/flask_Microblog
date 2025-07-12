@@ -1,0 +1,165 @@
+html {
+  font-family: lato, sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* ======================================== header =============================================== */
+.navbar {
+  max-width: 640px;
+  margin: 50px auto;
+  padding: 0 20px;
+  display: flex;
+  /* flex-direction: row; ==> pas nécessaire */
+  justify-content: space-between;
+  font-size: 24px;
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  /* gap: 10px;  est équivalent à:
+    .navbar__logo {
+    margin-right: 10px;
+}
+  
+  */
+}
+
+.navbar__logo {
+  margin-right: 10px;
+}
+
+.navbar__navigation {
+  display: flex;
+  list-style-type: none;
+  gap: 50px;
+  padding: 0;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: inherit;
+}
+/* ======================================== End header =============================================== */
+
+/* ======================================== form =============================================== */
+.main {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.form__paragraph {
+  width: 100%;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form__input {
+  width: inherit;
+  font-size: 18px;
+  padding: 12px 20px;
+  border: none;
+  background-color: lab(92.85% 0.67 0.23);
+  margin-bottom: 10px;
+}
+.form__button {
+  background-color: #3cd0ff;
+  /* font-size: 18px; */
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.form__button:hover {
+  background-color: #3cd0ff;
+  opacity: 0.8;
+}
+
+/* ======================================== End form =============================================== */
+
+/* ========================================  entry =============================================== */
+.entry {
+  margin-top: 50px;
+}
+
+.entry__title {
+  display: inline;
+  font-size: 18px;
+}
+
+.entry__date {
+  color: gray;
+}
+
+.entry__content {
+  font-size: 16px;
+  line-height: 150%;
+}
+/* ======================================== End entry =============================================== */
+
+.footer {
+  background-color: #444a4e;
+  padding: 40px 0px;
+  margin-top: 50px;
+  border-top: 4px solid black;
+  color: white;
+}
+
+.footer__content {
+  max-width: 640px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__right {
+  display: flex;
+  gap: 50px;
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+}
+
+/*footer__left and footer__right*/
+
+/* .footer__left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+} */
+
+.footer__item {
+  text-decoration: none;
+  color: inherit;
+  /* line-height: 200%; */
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.footer__item:hover {
+  text-decoration: underline;
+}
