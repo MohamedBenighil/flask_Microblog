@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Microblog</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
   </head>
   <body>
     <header class="navbar">
       <div class="navbar__brand">
-        <img class="navbar__logo" src="./logo.svg" alt="logo" /> Microblog
+        <img class="navbar__logo" src="/static/logo.svg" alt="logo" /> Microblog
       </div>
 
       <ul class="navbar__navigation">
@@ -24,31 +24,27 @@
     <main class="main">
       <section>
         <h1>Add new entry</h1>
-        <form class="form" method="get">
+        <form class="form" method="post">
           <p class="form__paragraph">
-            <!-- <label class="form__label" for="sample">Entry contents</label> -->
-            <textarea
-              class="form__input"
-              name="sample"
-              id="sample"
-              aria-label="Entry contents"
-            ></textarea>
+            <label class="form__label" for="entry">Entry contents</label>
+            <textarea class="form__input" name="entry" id="entry"></textarea>
           </p>
           <button class="form__button" type="submit">Add Entry</button>
         </form>
       </section>
       <section>
         <h1>Recent posts</h1>
+        {% for entry in entries %}
         <article class="entry">
           <div>
-            <h2 class="entry__title">A bit of chill Today</h2>
-            <time class="entry__date" datetime="2022-04-24">• Apr 24</time>
+            <h2 class="entry__title">{{ entry[0] | truncate(20, true)}}</h2>
+            <time class="entry__date" datetime="{{ entry[1] }}"
+              >• {{ entry[2] }}</time
+            >
           </div>
-          <p class="entry__content">
-            Today i can’ t learn too much, because i spent some time designing
-            my new app
-          </p>
+          <p class="entry__content">{{ entry[0] }}</p>
         </article>
+        {% endfor %}
       </section>
     </main>
     <footer class="footer">
